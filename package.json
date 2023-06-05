@@ -3,7 +3,7 @@
 	"description": "Fuzzy search tab list",
 	"version": "0.0.1",
 	"publisher": "",
-	"repository": "",
+	"repository": "https://github.com/kauz56/vscode-ctrl-tab-fuzzy.git",
 	"engines": {
 		"vscode": "^1.74.0"
 	},
