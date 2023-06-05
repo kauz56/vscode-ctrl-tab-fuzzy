@@ -15,6 +15,7 @@ function activate(context) {
         const items = openEditors
             // Filter out non file buffers
             .filter(editor => editor.uri.fsPath.includes('.'))
+            .filter(editor => !editor.uri.fsPath.endsWith('.git'))
             .map(editor => ({
                 label: path.basename(editor.fileName),
                 description: path.dirname(editor.uri.fsPath),
