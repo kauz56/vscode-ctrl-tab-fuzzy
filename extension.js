@@ -16,15 +16,15 @@ function activate(context) {
             // Filter out non file buffers
             .filter(editor => editor.uri.fsPath.includes('.'))
             .filter(editor => !editor.uri.fsPath.endsWith('.git'))
+            // Exclude the currently active document
+            .filter(editor => editor.uri.fsPath !== activeFilePath)
             .map(editor => ({
                 label: path.basename(editor.fileName),
                 description: path.dirname(editor.uri.fsPath),
                 editor,
                 lastUsed: lastUsedTimes.get(editor.uri.fsPath) || 0
-            })).sort((a, b) => {
-                // Sort the current active document to the bottom
-                if (a.editor.uri.fsPath === activeFilePath) return 1;
-                if (b.editor.uri.fsPath === activeFilePath) return -1;
+            }))
+            .sort((a, b) => {
                 // For others, sort based on last used time
                 return b.lastUsed - a.lastUsed;
             });

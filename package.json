@@ -1,7 +1,7 @@
 {
 	"name": "vscode-ctrl-tab-fuzzy",
 	"description": "Fuzzy search tab list",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "kauz56",
 	"repository": "https://github.com/kauz56/vscode-ctrl-tab-fuzzy.git",
 	"engines": {
