@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 kauz56
+Copyright (c) 2024 kauz56
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
